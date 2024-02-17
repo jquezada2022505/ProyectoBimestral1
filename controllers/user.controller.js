@@ -17,7 +17,11 @@ const usuariosGet = async(req, res = response) => {
         total,
         usuarios
     });
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> feature/login1
 
 const getUsuarioById = async(req, res) => {
     const { id } = req.params;
@@ -26,26 +30,43 @@ const getUsuarioById = async(req, res) => {
     res.status(200).json({
         usuario
     });
+<<<<<<< HEAD
 }
 
 const putUsuarios = async(req, res = response) => {
     const { id } = req.params;
     const { _id, password, google, ...resto } = req.body;
+=======
+};
+
+const putUsuarios = async(req, res = response) => {
+    const { id } = req.params;
+    const { _id, password, correo, ...resto } = req.body;
+>>>>>>> feature/login1
 
     if (password) {
         const salt = bcryptjs.genSaltSync();
         resto.password = bcryptjs.hashSync(password, salt);
     }
 
+<<<<<<< HEAD
     await Usuario.findByIdAndUpdate(id, resto);
 
     const usuario = Usuario.findOne({ id });
+=======
+    const usuario = await Usuario.findByIdAndUpdate(id, resto);
+>>>>>>> feature/login1
 
     res.status(200).json({
         msg: 'Usuario Actualizado Exitosamente!!!',
         usuario
     });
+<<<<<<< HEAD
 }
+=======
+};
+
+>>>>>>> feature/login1
 
 const usuariosDelete = async(req, res) => {
     const { id } = req.params;
@@ -70,7 +91,11 @@ const usuariosPost = async(req, res) => {
     res.status(202).json({
         usuario
     });
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> feature/login1
 
 module.exports = {
     usuariosPost,
