@@ -1,16 +1,15 @@
 const { Router } = require('express');
-const { check } =  require('express-validator');
+const { check } = require('express-validator');
 
 const { login } = require('../controllers/auth.controller');
-const { validarCampos } =  require('../middlewares/validar-campos');
+const { validarCampos } = require('../middlewares/validarCampos');
 
 const router = Router();
 
 router.post(
-    '/login',
-    [
+    '/login', [
         check('correo', "Este no es un correo válido").isEmail(),
-        check('password'," el password es obligatorio").not().isEmpty(),
+        check('password', " el password es obligatorio").not().isEmpty(),
         validarCampos
     ], login);
 
