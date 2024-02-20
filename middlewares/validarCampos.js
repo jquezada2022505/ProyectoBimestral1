@@ -10,9 +10,5 @@ const validarCampos = (req, res, next) => {
 };
 
 module.exports = {
-<<<<<<< HEAD
-    validarCampos
-=======
     validarCampos,
->>>>>>> feature/login1
 };

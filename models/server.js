@@ -9,10 +9,6 @@ class Server {
         this.port = process.env.PORT;
         this.usuarioPath = '/api/usuarios';
         this.authPath = '/api/auth';
-<<<<<<< HEAD
-
-=======
->>>>>>> feature/login1
         this.conectarDB();
         this.middlewares();
         this.routes();
