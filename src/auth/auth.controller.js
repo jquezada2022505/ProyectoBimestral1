@@ -6,32 +6,28 @@ export const login = async(req, res) => {
     const { correo, password } = req.body;
 
     try {
-        //verificar si el email existe:
         const usuario = await Usuario.findOne({ correo });
 
         if (!usuario) {
             return res.status(400).json({
-                msg: "Credenciales incorrectas, Correo no existe en la base de datos",
+                msg: "Incorrect credentials, Email does not exist in the database",
             });
         }
-        //verificar si el ususario está activo
         if (!usuario.estado) {
             return res.status(400).json({
-                msg: "El usuario no existe en la base de datos",
+                msg: "The user does not exist in the database",
             });
         }
-        // verificar la contraseña
         const validPassword = bcryptjs.compareSync(password, usuario.password);
         if (!validPassword) {
             return res.status(400).json({
-                msg: "La contraseña es incorrecta",
+                msg: "Password is incorrect",
             });
         }
-        //generar el JWT
         const token = await generarJWT(usuario.id);
 
         res.status(200).json({
-            msg: 'Login Ok!!!',
+            msg: 'Login',
             usuario,
             token
         });
@@ -39,7 +35,7 @@ export const login = async(req, res) => {
     } catch (e) {
         console.log(e);
         res.status(500).json({
-            msg: "Comuniquese con el administrador",
+            msg: "Contact administrator",
         });
     }
 }

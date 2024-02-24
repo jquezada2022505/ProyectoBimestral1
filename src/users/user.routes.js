@@ -22,7 +22,7 @@ router.get("/", usuariosGet);
 
 router.get(
     "/:id", [
-        check("id", "No es un ID válido").isMongoId(),
+        check("id", "The ID entered is not valid").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos,
     ],
@@ -31,11 +31,11 @@ router.get(
 
 router.post(
     "/", [
-        check("nombre", "El nombre es obligatorio").not().isEmpty(),
+        check("nombre", "The name is required").not().isEmpty(),
         check("password", "El password debe ser mayor a 6 caracteres").isLength({
             min: 6,
         }),
-        check("correo", "Este no es un correo válido").isEmail(),
+        check("correo", "The email entered is not valid ").isEmail(),
         check("correo").custom(existenteEmail),
         check("role").custom(esRoleValido),
         validarCampos,
@@ -45,7 +45,7 @@ router.post(
 
 router.put(
     "/:id", [
-        check("id", "No es un ID válido").isMongoId(),
+        check("id", "The ID entered is not valid").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos,
     ],
@@ -55,8 +55,8 @@ router.put(
 router.delete(
     "/:id", [
         validarJWT,
-        tieneRole("ADMIN_ROLE", "VENTAS_ROLE"),
-        check("id", "No es un ID válido").isMongoId(),
+        tieneRole("ADMIN_ROLE", "CLIENT_ROLE"),
+        check("id", "The ID entered is not valid").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos,
     ],
