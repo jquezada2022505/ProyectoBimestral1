@@ -1,12 +1,4 @@
-import Role from '../roles/roles.model.js';
 import User from '../users/user.model.js';
-
-export const esRoleValido = async(role = '') => {
-    const existeRol = await Role.findOne({ role });
-    if (!existeRol) {
-        throw new Error(`The role ${role} does not exist in the database`);
-    }
-}
 
 export const existenteEmail = async(correo = '') => {
     const existeEmail = await User.findOne({ correo });

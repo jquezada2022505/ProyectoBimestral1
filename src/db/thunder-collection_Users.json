@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "Users",
-    "dateExported": "2024-02-24T08:05:30.307Z",
+    "dateExported": "2024-03-04T20:44:24.278Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "47997d2d-59d5-489b-9a65-da78490d1538",
-            "colId": "9c84b273-fbb9-4d03-9839-5e371f30ba08",
+            "_id": "501d8e6c-a721-4b18-9acc-815c71bdb957",
+            "colId": "d41b7c09-c949-41d8-9969-bc6df307e88b",
             "containerId": "",
             "name": "userPOST",
             "url": "localhost:3000/api/usuarios",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-24T07:11:24.552Z",
-            "modified": "2024-02-24T08:04:49.052Z",
+            "created": "2024-03-04T20:24:20.166Z",
+            "modified": "2024-03-04T20:24:20.166Z",
             "headers": [],
             "params": [],
             "body": {
@@ -25,69 +25,62 @@
             "tests": []
         },
         {
-            "_id": "17169eab-9aca-4932-9c36-4efdf9a964f7",
-            "colId": "9c84b273-fbb9-4d03-9839-5e371f30ba08",
+            "_id": "be8f9cab-279d-4ec6-aa5b-04ee5e3adc30",
+            "colId": "d41b7c09-c949-41d8-9969-bc6df307e88b",
             "containerId": "",
             "name": "userGET",
             "url": "localhost:3000/api/usuarios",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-24T07:40:43.167Z",
-            "modified": "2024-02-24T07:40:52.964Z",
+            "created": "2024-03-04T20:24:20.167Z",
+            "modified": "2024-03-04T20:24:20.167Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "dd90710d-8023-4bca-a22f-28449de09a2f",
-            "colId": "9c84b273-fbb9-4d03-9839-5e371f30ba08",
-            "containerId": "",
-            "name": "userGETById",
-            "url": "localhost:3000/api/usuarios/65d9a320f0c5a3aeb73d3ffb",
-            "method": "GET",
-            "sortNum": 30000,
-            "created": "2024-02-24T07:41:06.153Z",
-            "modified": "2024-02-24T08:04:59.963Z",
-            "headers": [],
-            "params": [],
-            "tests": []
-        },
-        {
-            "_id": "1ff9fc75-a6d9-40fd-b5bd-e7f64e6ac2a5",
-            "colId": "9c84b273-fbb9-4d03-9839-5e371f30ba08",
+            "_id": "3fe1d057-8821-4959-9e67-a9f1303d3d13",
+            "colId": "d41b7c09-c949-41d8-9969-bc6df307e88b",
             "containerId": "",
             "name": "userPUT",
-            "url": "localhost:3000/api/usuarios/65d99d478fab0154a1b4fef6",
+            "url": "localhost:3000/api/usuarios/65e631da2eb6aaca568d7619",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-02-24T07:41:38.956Z",
-            "modified": "2024-02-24T08:01:26.546Z",
-            "headers": [],
+            "created": "2024-03-04T20:24:20.169Z",
+            "modified": "2024-03-04T20:41:48.198Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2MzFkYTJlYjZhYWNhNTY4ZDc2MTkiLCJpYXQiOjE3MDk1ODQ4OTcsImV4cCI6MTcwOTU4ODQ5N30.3m7cR6SXbZPzabCYQpRvnmWYfmSboGyxjes2DmAaIx0"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
                 "raw": "{\n  \"nombre\": \"Antonio Quezada\",\n  \"correo\": \"aquezada@gmail.com\",\n  \"password\": \"654321\",\n  \"role\": \"ADMIN_ROLE\"\n}",
                 "form": []
             },
+            "reqType": "put",
             "tests": []
         },
         {
-            "_id": "d4e3bdf2-9ae5-4f4c-aef4-d3cd53681683",
-            "colId": "9c84b273-fbb9-4d03-9839-5e371f30ba08",
+            "_id": "9bce753e-3330-4ad3-a0e5-36e58c77cae1",
+            "colId": "d41b7c09-c949-41d8-9969-bc6df307e88b",
             "containerId": "",
             "name": "userDELETE",
-            "url": "localhost:3000/api/usuarios/65d99d478fab0154a1b4fef6",
+            "url": "localhost:3000/api/usuarios/65e631da2eb6aaca568d7619",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-02-24T07:44:26.734Z",
-            "modified": "2024-02-24T08:04:18.795Z",
+            "created": "2024-03-04T20:24:20.170Z",
+            "modified": "2024-03-04T20:42:17.323Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ5OWQ0NzhmYWIwMTU0YTFiNGZlZjYiLCJpYXQiOjE3MDg3NjA5MjQsImV4cCI6MTcwODc2NDUyNH0.u7S4H8CxkE83rQEajbxZQbdI9WRPsUIuILAlIfVdZpU"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2MzFkYTJlYjZhYWNhNTY4ZDc2MTkiLCJpYXQiOjE3MDk1ODQ4OTcsImV4cCI6MTcwOTU4ODQ5N30.3m7cR6SXbZPzabCYQpRvnmWYfmSboGyxjes2DmAaIx0"
                 }
             ],
             "params": [],
+            "reqType": "del",
             "tests": []
         }
     ]

@@ -43,12 +43,7 @@ export const getUsuarioById = async(req, res) => {
 
 export const usuariosPut = async(req, res = response) => {
     const { id } = req.params;
-    const { _id, password, google, correo, ...resto } = req.body;
-
-    if (password) {
-        const salt = bcryptjs.genSaltSync();
-        resto.password = bcryptjs.hashSync(password, salt);
-    }
+    const { _id, password, google, ...resto } = req.body;
 
     await User.findByIdAndUpdate(id, resto);
 
