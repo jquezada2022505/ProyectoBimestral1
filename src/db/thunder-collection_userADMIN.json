@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
-    "collectionName": "Users",
-    "dateExported": "2024-03-04T20:44:24.278Z",
+    "collectionName": "userADMIN",
+    "dateExported": "2024-03-04T23:15:54.515Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,14 +14,20 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-04T20:24:20.166Z",
-            "modified": "2024-03-04T20:24:20.166Z",
-            "headers": [],
+            "modified": "2024-03-04T23:01:55.826Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NTE3YTVjYTBiY2M3ZTViZDdmNGYiLCJpYXQiOjE3MDk1OTI5NjEsImV4cCI6MTcwOTU5NjU2MX0.RAJtDIet5ublKbKt-lbNSTsOusoDgj3tLs1a3CI3wq8"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
                 "raw": "{\n  \"nombre\": \"Josué Quezada\",\n  \"correo\": \"josuequezada@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {

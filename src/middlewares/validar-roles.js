@@ -8,7 +8,7 @@ export const tieneRole = (...roles) => {
 
         if (!roles.includes(req.usuario.role)) {
             return res.status(401).json({
-                msg: `Unauthorized user, has a role ${req.usuario.role}, authorized roles are ${ roles }`
+                msg: `Unauthorized user, has a role ${req.usuario.role}, authorized roles are ${roles}`
             })
         }
 

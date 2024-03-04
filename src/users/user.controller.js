@@ -2,14 +2,14 @@ import { response, request } from "express";
 import bcryptjs from 'bcryptjs';
 import User from './user.model.js';
 
-export const usuariosGet = async(req = request, res = response) => {
+export const usuariosGet = async (req = request, res = response) => {
     const { limite, desde } = req.query;
     const query = { estado: true };
     const [total, usuarios] = await Promise.all([
         User.countDocuments(query),
         User.find(query)
-        .skip(Number(desde))
-        .limit(Number(limite))
+            .skip(Number(desde))
+            .limit(Number(limite))
     ]);
 
     res.status(200).json({
@@ -18,9 +18,13 @@ export const usuariosGet = async(req = request, res = response) => {
     });
 }
 
-export const usuariosPost = async(req, res) => {
+export const usuariosPost = async (req, res) => {
     const { nombre, correo, password, role } = req.body;
     const usuario = new User({ nombre, correo, password, role });
+
+    if (role !== 'ADMIN_ROLE' && role !== 'CLIENT_ROLE') {
+        return res.status(400).json({ error: "The role must be 'ADMIN_ROLE' or 'CLIENT_ROLE" });
+    }
 
     const salt = bcryptjs.genSaltSync();
     usuario.password = bcryptjs.hashSync(password, salt);
@@ -32,7 +36,7 @@ export const usuariosPost = async(req, res) => {
     });
 }
 
-export const getUsuarioById = async(req, res) => {
+export const getUsuarioById = async (req, res) => {
     const { id } = req.params;
     const usuario = await User.findOne({ _id: id });
 
@@ -41,7 +45,7 @@ export const getUsuarioById = async(req, res) => {
     })
 }
 
-export const usuariosPut = async(req, res = response) => {
+export const usuariosPut = async (req, res = response) => {
     const { id } = req.params;
     const { _id, password, google, ...resto } = req.body;
 
@@ -55,7 +59,7 @@ export const usuariosPut = async(req, res = response) => {
     });
 }
 
-export const usuariosDelete = async(req, res) => {
+export const usuariosDelete = async (req, res) => {
     const { id } = req.params;
 
     const usuario = await User.findByIdAndUpdate(id, { estado: false });

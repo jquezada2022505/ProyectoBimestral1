@@ -2,7 +2,7 @@ import bcryptjs from 'bcryptjs';
 import Usuario from '../users/user.model.js'
 import { generarJWT } from '../helpers/generate-jwt.js';
 
-export const login = async(req, res) => {
+export const login = async (req, res) => {
     const { correo, password } = req.body;
 
     try {
@@ -38,4 +38,19 @@ export const login = async(req, res) => {
             msg: "Contact administrator",
         });
     }
+}
+
+export const signUp = async (req, res) => {
+
+    const { nombre, correo, password } = req.body;
+    const usuario = new Usuario({ nombre, correo, password });
+
+    const salt = bcryptjs.genSaltSync();
+    usuario.password = bcryptjs.hashSync(password, salt);
+
+    await usuario.save();
+
+    res.status(200).json({
+        usuario
+    });
 }

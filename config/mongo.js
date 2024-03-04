@@ -2,7 +2,7 @@
 
 import mongoose from 'mongoose';
 
-export const dbConnection = async() => {
+export const dbConnection = async () => {
     try {
         mongoose.connection.on('error', () => {
             console.log('MongoDB | could not be connect to mongodb')

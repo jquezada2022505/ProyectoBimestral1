@@ -7,6 +7,8 @@ import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
 import userRoutes from '../src/users/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js';
+import Usuario from '../src/users/user.model.js';
+import bcryptjs from 'bcryptjs';
 
 class Server {
     constructor() {
@@ -22,7 +24,20 @@ class Server {
 
     async conectarDB() {
         await dbConnection();
+        const lengthUsuario = await Usuario.countDocuments()
+        if (lengthUsuario > 0) return;
+
+        const salt = bcryptjs.genSaltSync();
+        const password = bcryptjs.hashSync('123456', salt);
+
+        const adminUsuario = new Usuario(
+            { nombre: "admin", correo: "admin@gmail.com", password, role: "ADMIN_ROLE" }
+        )
+
+        adminUsuario.save();
+
     }
+
 
     middlewares() {
         this.app.use(express.urlencoded({ extended: false }));
@@ -30,6 +45,7 @@ class Server {
         this.app.use(express.json());
         this.app.use(helmet());
         this.app.use(morgan('dev'));
+
     }
 
     routes() {
@@ -42,6 +58,6 @@ class Server {
             console.log('Server running on port ', this.port);
         });
     }
-}
 
+}
 export default Server;
