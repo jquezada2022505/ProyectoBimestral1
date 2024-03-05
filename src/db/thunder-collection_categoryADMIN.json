@@ -1,0 +1,90 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "categoryADMIN",
+    "dateExported": "2024-03-05T23:22:02.845Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d9e28bcd-0bb5-46ca-8f2f-e4dab9f45724",
+            "colId": "3b23ddfb-ff6b-4ef6-bc00-1284414301d9",
+            "containerId": "",
+            "name": "categoryPOST",
+            "url": "localhost:3000/api/category",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-05T19:55:06.743Z",
+            "modified": "2024-03-05T22:42:39.349Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OWZhZWU3M2YyZDZkM2IzOWYyNGEiLCJpYXQiOjE3MDk2Nzg1MTcsImV4cCI6MTcwOTY4MjExN30.5sbyFiGN7GOL9NynkGAle45TpFH4VkmoWc2GlPJWCn4"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"categoria\": \"L\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "84b62d53-67ae-4bd1-8d30-d76cf4641969",
+            "colId": "3b23ddfb-ff6b-4ef6-bc00-1284414301d9",
+            "containerId": "",
+            "name": "categoryGET",
+            "url": "localhost:3000/api/category",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-05T20:15:51.160Z",
+            "modified": "2024-03-05T20:16:01.446Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7a1976c0-793d-4d62-83f6-1196638f5c61",
+            "colId": "3b23ddfb-ff6b-4ef6-bc00-1284414301d9",
+            "containerId": "",
+            "name": "categoryPUT",
+            "url": "localhost:3000/api/category/65e780235d3c201c18a4bbe4",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-05T20:23:05.691Z",
+            "modified": "2024-03-05T20:31:26.145Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3N2QzOWNkNjkwOGY3MzUwMjYzMjciLCJpYXQiOjE3MDk2NzA0MTUsImV4cCI6MTcwOTY3NDAxNX0.ay2Ew3K3XId-p0ncVfJ4yXnqQCPS_YjZCR4n7pSkCgU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"categoria\": \"Tecnologia\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d74d5cb4-a2f4-46b0-aea5-85e4b3a4509f",
+            "colId": "3b23ddfb-ff6b-4ef6-bc00-1284414301d9",
+            "containerId": "",
+            "name": "categoryDELETE",
+            "url": "localhost:3000/api/category/65e780235d3c201c18a4bbe4",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-05T20:46:42.195Z",
+            "modified": "2024-03-05T20:49:06.611Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3N2QzOWNkNjkwOGY3MzUwMjYzMjciLCJpYXQiOjE3MDk2NzA0MTUsImV4cCI6MTcwOTY3NDAxNX0.ay2Ew3K3XId-p0ncVfJ4yXnqQCPS_YjZCR4n7pSkCgU"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

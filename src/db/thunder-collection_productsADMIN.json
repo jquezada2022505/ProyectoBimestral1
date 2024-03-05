@@ -1,0 +1,86 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "productsADMIN",
+    "dateExported": "2024-03-05T23:22:06.411Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "29532a29-4c6a-47e8-b12b-6e013e63e33d",
+            "colId": "f2c26dd1-3a3c-47ea-a85c-e8dcfc541dce",
+            "containerId": "",
+            "name": "productsPOST",
+            "url": "localhost:3000/api/products",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-05T22:17:10.042Z",
+            "modified": "2024-03-05T22:42:50.342Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OWZhZWU3M2YyZDZkM2IzOWYyNGEiLCJpYXQiOjE3MDk2Nzg1MTcsImV4cCI6MTcwOTY4MjExN30.5sbyFiGN7GOL9NynkGAle45TpFH4VkmoWc2GlPJWCn4"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameProduct\": \"Laptop\",\n  \"descProduct\": \"Computadora Gamer\", \n  \"stock\": 10,\n  \"price\": \"12.00\",\n  \"category\": \"65e79fdfe73f2d6d3b39f253\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3caa8224-03a4-4ea7-8a3a-ffa9a730bb55",
+            "colId": "f2c26dd1-3a3c-47ea-a85c-e8dcfc541dce",
+            "containerId": "",
+            "name": "productsGET",
+            "url": "localhost:3000/api/products",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-05T22:49:21.984Z",
+            "modified": "2024-03-05T22:49:32.150Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9f61f2e4-3537-41ad-87bb-911d4912a150",
+            "colId": "f2c26dd1-3a3c-47ea-a85c-e8dcfc541dce",
+            "containerId": "",
+            "name": "productGetById",
+            "url": "localhost:3000/api/products/65e7a0a95f3f17926281dd53",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-05T22:53:48.440Z",
+            "modified": "2024-03-05T22:54:11.186Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "3cbac916-2afb-4774-a308-fe704efb359a",
+            "colId": "f2c26dd1-3a3c-47ea-a85c-e8dcfc541dce",
+            "containerId": "",
+            "name": "productsPUT",
+            "url": "localhost:3000/api/products/65e7a0a95f3f17926281dd53",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-05T23:00:48.614Z",
+            "modified": "2024-03-05T23:03:13.706Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OWZhZWU3M2YyZDZkM2IzOWYyNGEiLCJpYXQiOjE3MDk2Nzg1MTcsImV4cCI6MTcwOTY4MjExN30.5sbyFiGN7GOL9NynkGAle45TpFH4VkmoWc2GlPJWCn4"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameProduct\": \"Laptop\",\n  \"descProduct\": \"Laptop Gamer\", \n  \"stock\": 3,\n  \"price\": \"5000.00\",\n  \"category\": \"65e79fdfe73f2d6d3b39f253\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

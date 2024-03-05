@@ -9,6 +9,7 @@ import userRoutes from '../src/users/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js';
 import Usuario from '../src/users/user.model.js';
 import categoryRoutes from '../src/category/category.routes.js';
+import productsRoutes from '../src/products/products.routes.js';
 import bcryptjs from 'bcryptjs';
 
 class Server {
@@ -18,6 +19,7 @@ class Server {
         this.usuarioPath = '/api/usuarios'
         this.authPath = '/api/auth'
         this.categoryPath = '/api/category'
+        this.productPath = '/api/products'
 
         this.middlewares();
         this.conectarDB();
@@ -54,6 +56,7 @@ class Server {
         this.app.use(this.usuarioPath, userRoutes);
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.categoryPath, categoryRoutes);
+        this.app.use(this.productPath, productsRoutes);
     }
 
     listen() {

@@ -1,0 +1,31 @@
+import mongoose from 'mongoose';
+
+const ProductSchema = mongoose.Schema({
+    nameProduct: {
+        type: String,
+        required: [true, "The name product is obligatory"],
+    },
+    descProduct: {
+        type: String,
+        required: [true, "The description product is obligatory"],
+    },
+    stock: {
+        type: Number,
+        required: [true, "The stock is obligatory"],
+    },
+    price:{
+        type: String,
+        required: [true, "The price is obligatory"],
+    },
+    category:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "categories",
+        required: [true, "The category is obligatory"],    
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+    },
+});
+
+export default mongoose.model('Product', ProductSchema);
