@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoryADMIN",
-    "dateExported": "2024-03-05T23:22:02.845Z",
+    "dateExported": "2024-03-06T07:21:53.294Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "d9e28bcd-0bb5-46ca-8f2f-e4dab9f45724",
-            "colId": "3b23ddfb-ff6b-4ef6-bc00-1284414301d9",
+            "_id": "adb2fb01-8e4f-48c2-a161-3eaf4fae663d",
+            "colId": "7441998f-2a42-4e1e-bd1f-bfd89241567a",
             "containerId": "",
             "name": "categoryPOST",
             "url": "localhost:3000/api/category",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T19:55:06.743Z",
-            "modified": "2024-03-05T22:42:39.349Z",
+            "created": "2024-03-06T03:09:51.264Z",
+            "modified": "2024-03-06T03:09:51.264Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -30,29 +30,29 @@
             "tests": []
         },
         {
-            "_id": "84b62d53-67ae-4bd1-8d30-d76cf4641969",
-            "colId": "3b23ddfb-ff6b-4ef6-bc00-1284414301d9",
+            "_id": "f8d68fe0-96ed-418b-a1e3-3c0a35fb52d4",
+            "colId": "7441998f-2a42-4e1e-bd1f-bfd89241567a",
             "containerId": "",
             "name": "categoryGET",
             "url": "localhost:3000/api/category",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-05T20:15:51.160Z",
-            "modified": "2024-03-05T20:16:01.446Z",
+            "created": "2024-03-06T03:09:51.265Z",
+            "modified": "2024-03-06T03:09:51.265Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "7a1976c0-793d-4d62-83f6-1196638f5c61",
-            "colId": "3b23ddfb-ff6b-4ef6-bc00-1284414301d9",
+            "_id": "e20dd1a8-6148-45ae-924f-02617913cf3d",
+            "colId": "7441998f-2a42-4e1e-bd1f-bfd89241567a",
             "containerId": "",
             "name": "categoryPUT",
             "url": "localhost:3000/api/category/65e780235d3c201c18a4bbe4",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-05T20:23:05.691Z",
-            "modified": "2024-03-05T20:31:26.145Z",
+            "created": "2024-03-06T03:09:51.266Z",
+            "modified": "2024-03-06T03:09:51.266Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -68,15 +68,15 @@
             "tests": []
         },
         {
-            "_id": "d74d5cb4-a2f4-46b0-aea5-85e4b3a4509f",
-            "colId": "3b23ddfb-ff6b-4ef6-bc00-1284414301d9",
+            "_id": "81910948-5a32-4fac-a24d-db4916b269ee",
+            "colId": "7441998f-2a42-4e1e-bd1f-bfd89241567a",
             "containerId": "",
             "name": "categoryDELETE",
             "url": "localhost:3000/api/category/65e780235d3c201c18a4bbe4",
             "method": "DELETE",
             "sortNum": 40000,
-            "created": "2024-03-05T20:46:42.195Z",
-            "modified": "2024-03-05T20:49:06.611Z",
+            "created": "2024-03-06T03:09:51.267Z",
+            "modified": "2024-03-06T03:09:51.267Z",
             "headers": [
                 {
                     "name": "x-token",

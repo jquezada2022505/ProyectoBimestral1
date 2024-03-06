@@ -13,14 +13,19 @@ const ProductSchema = mongoose.Schema({
         type: Number,
         required: [true, "The stock is obligatory"],
     },
-    price:{
+    price: {
         type: String,
         required: [true, "The price is obligatory"],
     },
-    category:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "categories",
-        required: [true, "The category is obligatory"],    
+    sales: {
+        type: Number,
+        default: 0 // Inicializar a 0
+    },
+    category: {
+        // type: mongoose.Schema.Types.ObjectId,
+        type: String,
+        ref: "category",
+        required: [true, "The category is obligatory"],
     },
     estado: {
         type: Boolean,
