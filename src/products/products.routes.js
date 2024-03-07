@@ -12,6 +12,7 @@ import {
     productsDelete,
     getOutOfStockProducts,
     getBestSellingProducts,
+    getProductsByName,
 } from "./products.controller.js";
 import {
     existeProductById,
@@ -26,6 +27,8 @@ import {
 const router = Router();
 
 router.get("/", productsGet);
+
+router.get('/products/search', getProductsByName);
 
 // Ruta para obtener productos agotados
 router.get('/out-of-stock', getOutOfStockProducts);

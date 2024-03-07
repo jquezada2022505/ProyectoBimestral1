@@ -39,49 +39,18 @@ export const getOutOfStockProducts = async(req, res, next) => {
     }
 };
 
-
-// Función para obtener los productos más vendidos
-// export const getBestSellingProducts = async(req, res) => {
-//     const {
-//         limite = 10, desde = 0
-//     } = req.query;
-//     const query = {
-//         estado: true,
-//         stock: {
-//             $gt: 0
-//         }
-//     };
-
-//     try {
-//         const [total, product] = await Promise.all([
-//             Product.countDocuments(query),
-//             Product.find(query)
-//             .sort({
-//                 stock: 1
-//             })
-//             .populate('category')
-//             .skip(Number(desde))
-//             .limit(Number(limite))
-//         ]);
-
-//         res.status(200).json({
-//             total,
-//             product
-//         });
-
-//     } catch (error) {
-//         console.log(error);
-//         res.status(400).json({
-//             msg: "Server Error"
-//         });
-//     };
-// };
 export const getBestSellingProducts = async(req, res) => {
-    const { limite = 10, desde = 0 } = req.query;
+    const {
+        limite = 10, desde = 0
+    } = req.query;
 
     try {
-        const products = await Product.find({ estado: true })
-            .sort({ sales: -1 }) // Ordenar por ventas descendentes
+        const products = await Product.find({
+                estado: true
+            })
+            .sort({
+                sales: -1
+            })
             .skip(Number(desde))
             .limit(Number(limite))
             .populate('category');
@@ -92,7 +61,9 @@ export const getBestSellingProducts = async(req, res) => {
         });
     } catch (error) {
         console.log(error);
-        res.status(500).json({ msg: "Server Error" });
+        res.status(500).json({
+            msg: "Server Error"
+        });
     }
 };
 /////
@@ -200,4 +171,16 @@ export const productsDelete = async(req, res) => {
         product,
         productAutenticated
     });
+};
+
+////
+
+export const getProductsByName = async(req, res) => {
+    try {
+        const { name } = req.query;
+        const products = await Product.find({ nameProduct: { $regex: name, $options: 'i' } });
+        res.status(200).json(products);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
 };

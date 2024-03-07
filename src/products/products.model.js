@@ -17,10 +17,6 @@ const ProductSchema = mongoose.Schema({
         type: String,
         required: [true, "The price is obligatory"],
     },
-    sales: {
-        type: Number,
-        default: 0 // Inicializar a 0
-    },
     category: {
         // type: mongoose.Schema.Types.ObjectId,
         type: String,

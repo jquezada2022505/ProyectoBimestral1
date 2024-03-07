@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "invoiceADMIN",
+    "dateExported": "2024-03-07T08:53:54.609Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "91b93774-6f1b-414e-bee4-e7f3d8cfa562",
+            "colId": "89c354f3-c182-4cf1-bb02-44814915ad80",
+            "containerId": "",
+            "name": "invoicePOST",
+            "url": "http://localhost:3000/api/invoice/invoices",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-07T05:34:57.388Z",
+            "modified": "2024-03-07T06:36:56.785Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"total\": 111\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "43af6b1d-454a-410c-945a-8231da30fbe3",
+            "colId": "89c354f3-c182-4cf1-bb02-44814915ad80",
+            "containerId": "",
+            "name": "invoiceItemPOST",
+            "url": "http://localhost:3000/api/invoice/invoice-items",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-07T06:36:06.101Z",
+            "modified": "2024-03-07T06:49:23.185Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"quantity:\": 10,\r\n  \"price\": 111\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3ee8e45d-d99d-4e97-927c-73f7a46ab126",
+            "colId": "89c354f3-c182-4cf1-bb02-44814915ad80",
+            "containerId": "",
+            "name": "invoiceGET",
+            "url": "http://localhost:3000/api/invoice/invoices",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-07T07:07:31.276Z",
+            "modified": "2024-03-07T07:07:40.561Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d02b0e52-9bce-4157-bd17-1725ea102500",
+            "colId": "89c354f3-c182-4cf1-bb02-44814915ad80",
+            "containerId": "",
+            "name": "invoiceItemGET",
+            "url": "http://localhost:3000/api/invoice/invoice-items",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-07T07:08:04.498Z",
+            "modified": "2024-03-07T07:08:15.438Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

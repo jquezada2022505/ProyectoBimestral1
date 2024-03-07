@@ -1,12 +1,19 @@
 import bcryptjs from 'bcryptjs';
 import Usuario from '../users/user.model.js'
-import { generarJWT } from '../helpers/generate-jwt.js';
+import {
+    generarJWT
+} from '../helpers/generate-jwt.js';
 
-export const login = async (req, res) => {
-    const { correo, password } = req.body;
+export const login = async(req, res) => {
+    const {
+        correo,
+        password
+    } = req.body;
 
     try {
-        const usuario = await Usuario.findOne({ correo });
+        const usuario = await Usuario.findOne({
+            correo
+        });
 
         if (!usuario) {
             return res.status(400).json({
@@ -40,10 +47,18 @@ export const login = async (req, res) => {
     }
 }
 
-export const signUp = async (req, res) => {
+export const signUp = async(req, res) => {
 
-    const { nombre, correo, password } = req.body;
-    const usuario = new Usuario({ nombre, correo, password });
+    const {
+        nombre,
+        correo,
+        password
+    } = req.body;
+    const usuario = new Usuario({
+        nombre,
+        correo,
+        password
+    });
 
     const salt = bcryptjs.genSaltSync();
     usuario.password = bcryptjs.hashSync(password, salt);
