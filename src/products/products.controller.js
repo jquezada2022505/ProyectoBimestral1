@@ -4,6 +4,7 @@ import {
 } from "express";
 import bcryptjs from 'bcryptjs';
 import Product from './products.model.js';
+import Category from '../category/category.model.js';
 
 export const productsGet = async(req = request, res = response) => {
         const {
@@ -175,12 +176,99 @@ export const productsDelete = async(req, res) => {
 
 ////
 
-export const getProductsByName = async(req, res) => {
+export const bestSellingProductClient = async(req, res) => {
+    const {
+        limite = 10, desde = 0
+    } = req.query;
+    const query = {
+        estado: true,
+        stock: {
+            $gt: 0,
+            $lte: 5
+        }
+    };
     try {
-        const { name } = req.query;
-        const products = await Product.find({ nameProduct: { $regex: name, $options: 'i' } });
+        const usuario = req.usuario;
+
+        if (usuario.role !== 'CLIENT_ROLE') {
+            return res.status(400).json({
+                error: 'You do not have permission to perform this action'
+            });
+        }
+
+        const [total, product] = await Promise.all([
+            Product.countDocuments(query),
+            Product.find(query)
+            .sort({
+                stock: 1
+            })
+            .populate('category')
+            .skip(Number(desde))
+            .limit(Number(limite))
+        ]);
+
+        res.status(200).json({
+            total,
+            product
+        });
+    } catch (error) {
+        console.error('Error getting best selling products', error);
+        res.status(400).json({
+            error: 'Error in server'
+        });
+    }
+};
+
+
+
+export const productsByCategory = async(req, res) => {
+    const {
+        categorys
+    } = req.params;
+
+    try {
+        const foundCategory = await Category.findOne({
+            category: categorys
+        });
+
+        console.log({ foundCategory })
+        if (!foundCategory) {
+            return res.status(404).json({
+                error: 'Category not found'
+            });
+        }
+
+        const products = await Product.find({
+            category: foundCategory._id
+        });
+
         res.status(200).json(products);
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error('Error getting products by category', error);
+        res.status(400).json({
+            error: 'Error in server'
+        });
+    }
+};
+
+
+export const ProductsByName = async(req, res) => {
+    const {
+        nameProduct
+    } = req.query;
+
+    try {
+        const product = await Product.find({
+            nameProduct: {
+                $regex: new RegExp(nameProduct, 'i')
+            }
+        });
+
+        res.status(200).json(product);
+    } catch (error) {
+        console.error('Error when searching for the product', error);
+        res.status(500).json({
+            error: 'Error in server'
+        });
     }
 };

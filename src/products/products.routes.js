@@ -12,7 +12,9 @@ import {
     productsDelete,
     getOutOfStockProducts,
     getBestSellingProducts,
-    getProductsByName,
+    bestSellingProductClient,
+    productsByCategory,
+    ProductsByName
 } from "./products.controller.js";
 import {
     existeProductById,
@@ -28,14 +30,15 @@ const router = Router();
 
 router.get("/", productsGet);
 
-router.get('/products/search', getProductsByName);
-
-// Ruta para obtener productos agotados
 router.get('/out-of-stock', getOutOfStockProducts);
 
-// Ruta para obtener los productos más vendidos
 router.get('/best-selling', getBestSellingProducts);
 
+router.get('/best-selling-client', validarJWT, bestSellingProductClient);
+
+router.get('/by-category/:category', productsByCategory);
+
+router.get('/search', ProductsByName);
 
 router.get(
     "/:id", [

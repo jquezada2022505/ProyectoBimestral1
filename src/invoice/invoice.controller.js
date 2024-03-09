@@ -1,63 +1,63 @@
 import Invoice from './invoice.model.js';
+import Sale from '../sale/sale.model.js';
+import Product from '../products/products.model.js';
 
-// Controlador para crear una nueva factura
-export const createInvoice = async(req, res) => {
+export const postInvoice = async(req, res) => {
     try {
-        const { user_id, total } = req.body;
-        const invoice = new Invoice({ user_id, total });
-        await invoice.save();
-        res.status(201).json({ message: 'Factura creada con éxito', invoice });
-    } catch (error) {
-        res.status(500).json({ message: 'Error al crear la factura', error: error.message });
-    }
-};
+        const usuario = req.usuario;
 
-// Controlador para obtener todas las facturas
-export const invoicesGet = async(req, res) => {
-    try {
-        const invoices = await Invoice.find().populate('user_id'); // Obtener todas las facturas y poblar los datos del usuario asociado
-        res.status(200).json(invoices); // Devolver las facturas encontradas en formato JSON
-    } catch (error) {
-        res.status(500).json({ message: 'Error al obtener las facturas', error: error.message }); // Manejar errores
-    }
-};
-
-// Controlador para obtener una factura por su ID
-export const getInvoiceById = async(req, res) => {
-    try {
-        const invoice = await Invoice.findById(req.params.id);
-        if (!invoice) {
-            return res.status(404).json({ message: 'Factura no encontrada' });
+        if (usuario.role !== 'CLIENT_ROLE') {
+            return res.status(403).json({ error: 'Access denied' });
         }
-        res.status(200).json(invoice);
+
+        const { saleId } = req.body;
+
+        if (!saleId) {
+            return res.status(400).json({ error: 'Sales ID is obligatory' });
+        }
+
+        const sale = await Sale.findById(saleId);
+
+        if (!sale) {
+            return res.status(404).json({ error: 'The specified sale was not found' });
+        }
+
+        const product = await Product.findById(sale.product);
+
+        if (!product) {
+            return res.status(404).json({ error: 'The product associated with the sale was not found' });
+        }
+
+        const total = sale.cantidad * product.price;
+
+        const nuevaFactura = new Invoice({
+            user: usuario.nombre,
+            sale: sale.product,
+            total: total
+        });
+
+        await nuevaFactura.save();
+
+        res.status(201).json({ factura: nuevaFactura });
     } catch (error) {
-        res.status(500).json({ message: 'Error al obtener la factura', error: error.message });
+        console.error('Error creating invoice', error);
+        res.status(500).json({ error: 'Server error' });
     }
 };
 
-// Controlador para actualizar una factura
-export const updateInvoice = async(req, res) => {
+export const getInvoice = async(req, res) => {
     try {
-        const { user_id, total } = req.body;
-        const invoice = await Invoice.findByIdAndUpdate(req.params.id, { user_id, total }, { new: true });
-        if (!invoice) {
-            return res.status(404).json({ message: 'Factura no encontrada' });
-        }
-        res.status(200).json({ message: 'Factura actualizada con éxito', invoice });
-    } catch (error) {
-        res.status(500).json({ message: 'Error al actualizar la factura', error: error.message });
-    }
-};
+        const usuario = req.usuario;
 
-// Controlador para eliminar una factura
-export const deleteInvoice = async(req, res) => {
-    try {
-        const invoice = await Invoice.findByIdAndDelete(req.params.id);
+        const invoice = await Invoice.findOne({ user: usuario.nombre }).populate('sale').exec();
+
         if (!invoice) {
-            return res.status(404).json({ message: 'Factura no encontrada' });
+            return res.status(404).json({ error: 'Invoice not found' });
         }
-        res.status(200).json({ message: 'Factura eliminada con éxito', invoice });
+
+        res.status(200).json({ factura: invoice });
     } catch (error) {
-        res.status(500).json({ message: 'Error al eliminar la factura', error: error.message });
+        console.error('Error obtaining invoice', error);
+        res.status(500).json({ error: 'Server error' });
     }
 };

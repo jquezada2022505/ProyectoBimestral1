@@ -1,0 +1,54 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "sale",
+    "dateExported": "2024-03-09T09:48:12.019Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7d909d9e-7759-4195-be26-17e294fc0655",
+            "colId": "22d9a5dc-6c0a-4b5a-a0d1-5f1b8420a2b0",
+            "containerId": "",
+            "name": "salePOST",
+            "url": "localhost:3000/api/sale",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-09T06:52:52.182Z",
+            "modified": "2024-03-09T07:18:11.059Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDhkM2JiZGZmNDMxOTZhMjFlZmUiLCJpYXQiOjE3MDk5Njg0MjQsImV4cCI6MTcwOTk3MjAyNH0.l6XpCXS3ehd_Nh_8MRNPUB6Ew0En4b6cc7tLg6lKDlE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"product\": \"compu\",\n  \"cantidad\": 1\n}",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "495a224b-6bbd-487f-be43-de9e6eb6788e",
+            "colId": "22d9a5dc-6c0a-4b5a-a0d1-5f1b8420a2b0",
+            "containerId": "",
+            "name": "saleGET",
+            "url": "localhost:3000/api/sale",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-09T06:53:07.048Z",
+            "modified": "2024-03-09T07:15:18.260Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDhkM2JiZGZmNDMxOTZhMjFlZmUiLCJpYXQiOjE3MDk5Njg0MjQsImV4cCI6MTcwOTk3MjAyNH0.l6XpCXS3ehd_Nh_8MRNPUB6Ew0En4b6cc7tLg6lKDlE"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

@@ -1,58 +1,59 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoryADMIN",
-    "dateExported": "2024-03-06T07:21:53.294Z",
+    "dateExported": "2024-03-09T09:47:31.849Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "adb2fb01-8e4f-48c2-a161-3eaf4fae663d",
-            "colId": "7441998f-2a42-4e1e-bd1f-bfd89241567a",
+            "_id": "b2b33d71-d2ba-417a-b681-a2deed0c161c",
+            "colId": "e9acd288-92a8-4768-b1fe-c8e298a6ff3e",
             "containerId": "",
             "name": "categoryPOST",
             "url": "localhost:3000/api/category",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-06T03:09:51.264Z",
-            "modified": "2024-03-06T03:09:51.264Z",
+            "created": "2024-03-09T04:46:37.313Z",
+            "modified": "2024-03-09T05:26:22.538Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OWZhZWU3M2YyZDZkM2IzOWYyNGEiLCJpYXQiOjE3MDk2Nzg1MTcsImV4cCI6MTcwOTY4MjExN30.5sbyFiGN7GOL9NynkGAle45TpFH4VkmoWc2GlPJWCn4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDZkM2JiYWIwMzQxNmFkMTAwNDEiLCJpYXQiOjE3MDk5NjE2MzIsImV4cCI6MTcwOTk2NTIzMn0.vaNZreGbuVhL8rgMqXyEJGu-T5sPZmceBTMIpRiRxMg"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"categoria\": \"L\"\n}",
+                "raw": "{\n  \"categoria\": \"H\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "f8d68fe0-96ed-418b-a1e3-3c0a35fb52d4",
-            "colId": "7441998f-2a42-4e1e-bd1f-bfd89241567a",
+            "_id": "1be09b89-d6df-4bae-8de6-d2968f4c3c25",
+            "colId": "e9acd288-92a8-4768-b1fe-c8e298a6ff3e",
             "containerId": "",
             "name": "categoryGET",
             "url": "localhost:3000/api/category",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-06T03:09:51.265Z",
-            "modified": "2024-03-06T03:09:51.265Z",
+            "created": "2024-03-09T04:46:37.317Z",
+            "modified": "2024-03-09T04:46:37.317Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "e20dd1a8-6148-45ae-924f-02617913cf3d",
-            "colId": "7441998f-2a42-4e1e-bd1f-bfd89241567a",
+            "_id": "78073556-f622-4431-967a-35c0df9497c3",
+            "colId": "e9acd288-92a8-4768-b1fe-c8e298a6ff3e",
             "containerId": "",
             "name": "categoryPUT",
             "url": "localhost:3000/api/category/65e780235d3c201c18a4bbe4",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-06T03:09:51.266Z",
-            "modified": "2024-03-06T03:09:51.266Z",
+            "created": "2024-03-09T04:46:37.318Z",
+            "modified": "2024-03-09T04:46:37.318Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -68,15 +69,15 @@
             "tests": []
         },
         {
-            "_id": "81910948-5a32-4fac-a24d-db4916b269ee",
-            "colId": "7441998f-2a42-4e1e-bd1f-bfd89241567a",
+            "_id": "175436b7-6de5-4247-b643-9680aa6a1ff6",
+            "colId": "e9acd288-92a8-4768-b1fe-c8e298a6ff3e",
             "containerId": "",
             "name": "categoryDELETE",
             "url": "localhost:3000/api/category/65e780235d3c201c18a4bbe4",
             "method": "DELETE",
             "sortNum": 40000,
-            "created": "2024-03-06T03:09:51.267Z",
-            "modified": "2024-03-06T03:09:51.267Z",
+            "created": "2024-03-09T04:46:37.319Z",
+            "modified": "2024-03-09T04:46:37.319Z",
             "headers": [
                 {
                     "name": "x-token",

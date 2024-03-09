@@ -1,0 +1,73 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "shopCar",
+    "dateExported": "2024-03-09T09:48:18.961Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "17fbb980-7834-442c-b8a7-5248f69a03e2",
+            "colId": "39b39a58-248e-4d37-974a-4103bc264228",
+            "containerId": "",
+            "name": "shopCarPOST",
+            "url": "localhost:3000/api/shopCar",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-09T08:15:16.516Z",
+            "modified": "2024-03-09T08:21:49.244Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDhkM2JiZGZmNDMxOTZhMjFlZmUiLCJpYXQiOjE3MDk5NzI0NzIsImV4cCI6MTcwOTk3NjA3Mn0.Wz2nBqYXuQn5AdhfjBH25emF2iTJGbSj_sO76Ky0Enc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"nombreProducto\": \"compu\",\n    \"cantidad\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "afeb34bc-826a-423a-9e65-8ae5db74926c",
+            "colId": "39b39a58-248e-4d37-974a-4103bc264228",
+            "containerId": "",
+            "name": "shopCarGET",
+            "url": "localhost:3000/api/shopCar",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-09T08:15:33.399Z",
+            "modified": "2024-03-09T08:29:37.886Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDhkM2JiZGZmNDMxOTZhMjFlZmUiLCJpYXQiOjE3MDk5NzI0NzIsImV4cCI6MTcwOTk3NjA3Mn0.Wz2nBqYXuQn5AdhfjBH25emF2iTJGbSj_sO76Ky0Enc"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "58e8facb-5d8d-4117-b828-e2a6112ac50f",
+            "colId": "39b39a58-248e-4d37-974a-4103bc264228",
+            "containerId": "",
+            "name": "shopCarDELETE",
+            "url": "localhost:3000/api/shopCar/DeleteShopCar",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-03-09T08:15:43.195Z",
+            "modified": "2024-03-09T08:30:29.885Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDhkM2JiZGZmNDMxOTZhMjFlZmUiLCJpYXQiOjE3MDk5NzI0NzIsImV4cCI6MTcwOTk3NjA3Mn0.Wz2nBqYXuQn5AdhfjBH25emF2iTJGbSj_sO76Ky0Enc"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

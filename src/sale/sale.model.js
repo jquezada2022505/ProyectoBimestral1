@@ -13,6 +13,14 @@ const SaleSchema = new Schema({
         ref: "Product",
         required: true,
     },
+    cantidad: {
+        type: Number,
+        required: true
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+    },
 });
 
 export default mongoose.model('Sale', SaleSchema);

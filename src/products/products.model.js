@@ -18,8 +18,8 @@ const ProductSchema = mongoose.Schema({
         required: [true, "The price is obligatory"],
     },
     category: {
-        // type: mongoose.Schema.Types.ObjectId,
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        //type: String,
         ref: "category",
         required: [true, "The category is obligatory"],
     },

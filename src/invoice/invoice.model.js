@@ -1,13 +1,23 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const invoiceSchema = new mongoose.Schema({
-    user_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+const Schema = mongoose.Schema;
+
+const InvoiceSchema = new Schema({
+    user: {
+        //type: Schema.Types.ObjectId,
+        type: String,
+        ref: "User",
+        required: true,
+    },
+    sale: {
+        //type: Schema.Types.ObjectId,
+        type: String,
+        ref: "Sale",
+        required: true,
     },
     total: {
         type: Number,
-        ref: 'total'
+        required: true
     },
     estado: {
         type: Boolean,
@@ -15,6 +25,4 @@ const invoiceSchema = new mongoose.Schema({
     },
 });
 
-const Invoice = mongoose.model('Invoice', invoiceSchema);
-
-export default Invoice;
+export default mongoose.model('Invoice', InvoiceSchema);

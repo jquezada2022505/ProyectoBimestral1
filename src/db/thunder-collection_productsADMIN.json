@@ -1,76 +1,77 @@
 {
     "client": "Thunder Client",
     "collectionName": "productsADMIN",
-    "dateExported": "2024-03-06T07:22:09.885Z",
+    "dateExported": "2024-03-09T09:47:57.417Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "a3985f33-d280-4e76-8fc8-2c53c96943a6",
-            "colId": "03424454-257c-4488-8118-c1d24976518e",
+            "_id": "b042ccf8-232f-4107-a07e-746a55713cad",
+            "colId": "1fef1227-5f74-467c-8a01-e7f170a46d23",
             "containerId": "",
             "name": "productsPOST",
             "url": "localhost:3000/api/products",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-06T03:09:51.316Z",
-            "modified": "2024-03-06T06:27:27.188Z",
+            "created": "2024-03-09T04:46:37.400Z",
+            "modified": "2024-03-09T07:13:00.438Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTY5ZTJjNDkwZWM2ZjIwMTA4Y2QiLCJpYXQiOjE3MDk3MDU0NDYsImV4cCI6MTcwOTcwOTA0Nn0._7hSuzpzHa_3bwe22Pkv-ZE6Kx6ktNGxrerpLVGidkY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDZkM2JiYWIwMzQxNmFkMTAwNDEiLCJpYXQiOjE3MDk5NjgzNDYsImV4cCI6MTcwOTk3MTk0Nn0.0iB4fZk0SDke1J8DLzq42f48Qj_akFUzzmwWcaOeBBo"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameProduct\": \"Laptop\",\n  \"descProduct\": \"Comaaaaa Gamer\", \n  \"stock\": 0,\n  \"price\": \"12.00\",\n  \"category\": \"65e79fdfe73f2d6d3b39f253\"\n}",
+                "raw": "{\n  \"nameProduct\": \"compu\",\n  \"descProduct\": \"Coma Gamer\", \n  \"stock\": 12,\n  \"price\": \"12.00\",\n  \"category\": \"65ebf2fe2cdad3f14b595806\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "29377bb5-86d3-4c69-ac44-b529a0647294",
-            "colId": "03424454-257c-4488-8118-c1d24976518e",
+            "_id": "17df2205-df48-4194-a56e-b03b20ec594e",
+            "colId": "1fef1227-5f74-467c-8a01-e7f170a46d23",
             "containerId": "",
             "name": "productsGET",
             "url": "localhost:3000/api/products",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-06T03:09:51.317Z",
-            "modified": "2024-03-06T03:09:51.317Z",
+            "created": "2024-03-09T04:46:37.401Z",
+            "modified": "2024-03-09T04:46:37.401Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "a386451f-6ca6-42c8-99e9-123b5e89dd96",
-            "colId": "03424454-257c-4488-8118-c1d24976518e",
+            "_id": "7b001a22-5af1-422d-90bc-28d7dfa4cbbb",
+            "colId": "1fef1227-5f74-467c-8a01-e7f170a46d23",
             "containerId": "",
             "name": "productGetById",
             "url": "localhost:3000/api/products/65e8053c84d09647e5868790",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-03-06T03:09:51.318Z",
-            "modified": "2024-03-06T05:57:20.401Z",
+            "created": "2024-03-09T04:46:37.402Z",
+            "modified": "2024-03-09T04:46:37.402Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "645f9676-8f6a-4394-8654-bb977a7a118c",
-            "colId": "03424454-257c-4488-8118-c1d24976518e",
+            "_id": "c41173c6-795e-412c-a358-052cd10fce0a",
+            "colId": "1fef1227-5f74-467c-8a01-e7f170a46d23",
             "containerId": "",
             "name": "productsPUT",
-            "url": "localhost:3000/api/products/65e7ec73f610ec4057c1b074",
+            "url": "localhost:3000/api/products/65ebe54099ed06f0f27b0a26",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-03-06T03:09:51.319Z",
-            "modified": "2024-03-06T04:10:12.742Z",
+            "created": "2024-03-09T04:46:37.403Z",
+            "modified": "2024-03-09T05:20:46.280Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTY5ZTJjNDkwZWM2ZjIwMTA4Y2QiLCJpYXQiOjE3MDk2OTY2NzUsImV4cCI6MTcwOTcwMDI3NX0.et17WwQazdk21T-jFbfi5A4MIu1jO3EuxcJEta_ja0Y"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDZkM2JiYWIwMzQxNmFkMTAwNDEiLCJpYXQiOjE3MDk5NjE2MzIsImV4cCI6MTcwOTk2NTIzMn0.vaNZreGbuVhL8rgMqXyEJGu-T5sPZmceBTMIpRiRxMg"
                 }
             ],
             "params": [],
@@ -79,18 +80,19 @@
                 "raw": "{\n  \"nameProduct\": \"Laptop\",\n  \"descProduct\": \"Laptop Gamer\", \n  \"stock\": 3,\n  \"price\": \"5000.00\",\n  \"category\": \"65e79fdfe73f2d6d3b39f253\"\n}",
                 "form": []
             },
+            "reqType": "put",
             "tests": []
         },
         {
-            "_id": "6f591428-b9cf-4e98-94e7-34d25c101efe",
-            "colId": "03424454-257c-4488-8118-c1d24976518e",
+            "_id": "4f5038d5-3aa3-4f21-98de-b1557e32ec6b",
+            "colId": "1fef1227-5f74-467c-8a01-e7f170a46d23",
             "containerId": "",
             "name": "productsDELETE",
             "url": "localhost:3000/api/products/65e80ace699715115585a143",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-03-06T04:08:52.225Z",
-            "modified": "2024-03-06T06:19:33.842Z",
+            "created": "2024-03-09T04:46:37.404Z",
+            "modified": "2024-03-09T04:46:37.404Z",
             "headers": [
                 {
                     "name": "X-token",
@@ -101,29 +103,29 @@
             "tests": []
         },
         {
-            "_id": "60c63df3-f340-480b-abde-61c61219d55a",
-            "colId": "03424454-257c-4488-8118-c1d24976518e",
+            "_id": "77cca676-ea5a-4242-832d-3fd7a8471c50",
+            "colId": "1fef1227-5f74-467c-8a01-e7f170a46d23",
             "containerId": "",
             "name": "stockGETSale0",
             "url": "http://localhost:3000/api/products/out-of-stock",
             "method": "GET",
             "sortNum": 60000,
-            "created": "2024-03-06T05:53:09.883Z",
-            "modified": "2024-03-06T05:53:21.901Z",
+            "created": "2024-03-09T04:46:37.405Z",
+            "modified": "2024-03-09T04:46:37.405Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "701969b3-10d3-4a95-b130-80b41d939fb7",
-            "colId": "03424454-257c-4488-8118-c1d24976518e",
+            "_id": "dddcb938-2c15-44cc-b58a-7fc8933acda8",
+            "colId": "1fef1227-5f74-467c-8a01-e7f170a46d23",
             "containerId": "",
             "name": "stockGETBuy",
             "url": "http://localhost:3000/api/products/best-selling",
             "method": "GET",
             "sortNum": 80000,
-            "created": "2024-03-06T05:56:11.290Z",
-            "modified": "2024-03-06T06:20:08.305Z",
+            "created": "2024-03-09T04:46:37.406Z",
+            "modified": "2024-03-09T04:46:37.406Z",
             "headers": [],
             "params": [],
             "tests": []

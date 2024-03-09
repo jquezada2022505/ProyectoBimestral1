@@ -1,28 +1,25 @@
-// Rutas de la factura (invoiceRoutes.mjs)
 import express from 'express';
 import {
-    createInvoice,
-    invoicesGet,
-    getInvoiceById,
-    updateInvoice,
-    deleteInvoice
-} from './invoice.controller.js';
+    Router
+} from "express";
+import {
+    check
+} from "express-validator";
+import { validarJWT } from "../middlewares/validar-jwt.js";
+import { getInvoice, postInvoice } from "./invoice.controller.js";
+import { validarCampos } from "../middlewares/validarCampos.js";
 
 const router = express.Router();
 
-// Ruta para crear una nueva factura
-router.post('/invoices', createInvoice);
+router.get("/", validarJWT, getInvoice);
 
-// Ruta para obtener todas las facturas
-router.get('/invoices', invoicesGet);
-
-// Ruta para obtener una factura por su ID
-router.get('/invoices/:id', getInvoiceById);
-
-// Ruta para actualizar una factura
-router.put('/invoices/:id', updateInvoice);
-
-// Ruta para eliminar una factura
-router.delete('/invoices/:id', deleteInvoice);
+router.post(
+    "/", [
+        validarJWT,
+        check("user", "The user is obligatory").not().isEmpty(),
+        validarCampos,
+    ],
+    postInvoice
+);
 
 export default router;

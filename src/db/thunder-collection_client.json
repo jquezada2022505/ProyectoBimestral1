@@ -1,0 +1,59 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "client",
+    "dateExported": "2024-03-09T09:48:08.319Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b1c15647-b489-4da2-9470-6114c0179ded",
+            "colId": "4302321a-b577-4779-90cc-6eb4835981dc",
+            "containerId": "",
+            "name": "bestSellingProductClient",
+            "url": "localhost:3000/api/products/best-selling-client",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-09T04:47:12.879Z",
+            "modified": "2024-03-09T04:54:04.738Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDhkM2JiZGZmNDMxOTZhMjFlZmUiLCJpYXQiOjE3MDk5NjAwMzYsImV4cCI6MTcwOTk2MzYzNn0.knE4d4rfXQ4k8o01QC17TPmCO87AOXJpRy_G23oYPig"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "1445a2f6-0247-453f-b7a8-2de56449c809",
+            "colId": "4302321a-b577-4779-90cc-6eb4835981dc",
+            "containerId": "",
+            "name": "productsByCategoryClient",
+            "url": "localhost:3000/api/products/by-category/L",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-09T04:47:27.295Z",
+            "modified": "2024-03-09T08:04:00.573Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "8848ad29-3d7f-45e6-b971-c96e2f154962",
+            "colId": "4302321a-b577-4779-90cc-6eb4835981dc",
+            "containerId": "",
+            "name": "getProductsByName",
+            "url": "localhost:3000/api/products/search",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-09T04:51:41.290Z",
+            "modified": "2024-03-09T04:57:24.088Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

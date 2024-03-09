@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "loginBimestral",
-    "dateExported": "2024-03-06T07:22:05.685Z",
+    "dateExported": "2024-03-09T09:47:53.192Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "73fb5b03-ce0e-478e-89ce-a4b031c09aef",
-            "colId": "3c18efa8-7a1d-426c-8d02-564c25c04010",
+            "_id": "6fc69089-f8ac-44bc-a6f5-53ada92461ea",
+            "colId": "b1446673-2dfa-4206-9727-0b5493c3066d",
             "containerId": "",
             "name": "sigUpPOST",
             "url": "localhost:3000/api/auth/signUp",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2024-03-06T03:09:51.290Z",
-            "modified": "2024-03-06T03:09:51.290Z",
+            "created": "2024-03-09T04:46:37.391Z",
+            "modified": "2024-03-09T04:46:37.391Z",
             "headers": [],
             "params": [],
             "body": {
@@ -25,22 +25,23 @@
             "tests": []
         },
         {
-            "_id": "cd6aaa41-650a-4692-b6fe-767d4e230e39",
-            "colId": "3c18efa8-7a1d-426c-8d02-564c25c04010",
+            "_id": "962dd827-6892-40b2-918d-178b528155b1",
+            "colId": "b1446673-2dfa-4206-9727-0b5493c3066d",
             "containerId": "",
             "name": "login",
             "url": "localhost:3000/api/auth/login",
             "method": "POST",
             "sortNum": 30000,
-            "created": "2024-03-06T03:09:51.289Z",
-            "modified": "2024-03-06T03:09:51.289Z",
+            "created": "2024-03-09T04:46:37.390Z",
+            "modified": "2024-03-09T07:13:44.464Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\": \"admin@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "raw": "{\n  \"correo\": \"josuequezada12345client@gmail.com\",\n  \"password\": \"123456\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         }
     ]
